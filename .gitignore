@@ -28,12 +28,7 @@ replay_pid*
 *.iml
 .gradle
 /local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+/.idea
 .DS_Store
 /build
 /captures
@@ -42,3 +37,4 @@ replay_pid*
 local.properties
 /extracted_images*
 venv/
+app/build/
