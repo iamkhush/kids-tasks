@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <!-- Task Image - Full Screen -->
+    <ImageView
+        android:id="@+id/taskImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/vakna"
+        android:contentDescription="Task Image" />
+
+    <!-- Semi-transparent overlay for better text readability -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlay_color" />
+
+    <!-- Current Date and Time - Left Side -->
+    <TextView
+        android:id="@+id/dateTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:text="Monday \n12:30 PM\n2024"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:shadowColor="@color/shadow_color"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2" />
+
+    <!-- Analog Clock - Left Middle -->
+    <com.example.myfirstapplication.AnalogClockView
+        android:id="@+id/analogClockView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp" />
+
+    <!-- Task Title -->
+    <TextView
+        android:id="@+id/taskTitleTextView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="40dp"
+        android:text="Good morning"
+        android:textColor="@color/text_color"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:gravity="end"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:shadowColor="@color/shadow_color"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4" />
+
+    <!-- Task Description - Hidden -->
+    <TextView
+        android:id="@+id/taskDescriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/taskTitleTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Time to brush your teeth!"
+        android:textColor="@color/text_color"
+        android:textSize="24sp"
+        android:shadowColor="@color/shadow_color"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:visibility="gone" />
+
+    <!-- Big Checkmark Button - Bottom Right -->
+    <Button
+        android:id="@+id/completeTaskButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/checkmark_button_background"
+        android:text="✓"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        android:textStyle="bold" />
+
+    <!-- Reset Button (for testing) -->
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:text="Reset"
+        android:textSize="16sp"
+        android:background="@drawable/reset_button_background"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
